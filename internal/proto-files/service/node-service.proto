@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package service;
+
+service NodeService {
+    rpc PrintDir(Request) returns (Response) {}
+    rpc FetchResponse (Request) returns (stream Response) {}
+}
+
+message Request { 
+    string body = 1;
+}
+message Response {
+    string body = 1;
+}
+
