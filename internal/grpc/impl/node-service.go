@@ -15,9 +15,5 @@ func NewNodeServiceGrpcImpl() *NodeServiceGrpcImpl {
 }
 
 func (serviceImpl *NodeServiceGrpcImpl) PrintDir(ctx context.Context, in *node.Request) (*service.Response, error) {
-	return &node.Response{Body: "Test"}, nil
-}
-
-func (serviceImpl *NodeServiceGrpcImpl) FetchResponse(ctx context.Context, in *node.Request) (*service.Response, error) {
-	return &node.Response{Body: "Test"}, nil
+	return &service.Response{Body: "Test PrintDir"}, nil
 }
