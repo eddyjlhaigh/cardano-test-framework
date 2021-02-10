@@ -4,7 +4,7 @@ import (
 	"log"
 	"net"
 
-	"github.com/eddyjlhaigh/cardano-test-framework/chat"
+	"github.com/eddyjlhaigh/cardano-test-framework/node"
 	"google.golang.org/grpc"
 )
 
@@ -14,11 +14,11 @@ func main() {
 		log.Fatalf("Failed to listen on port 9000: %v", err)
 	}
 
-	s := chat.Server{}
+	s := node.Server{}
 
 	grpcServer := grpc.NewServer()
 
-	chat.RegisterChatServiceServer(grpcServer, &s)
+	node.RegisterChatServiceServer(grpcServer, &s)
 
 	if err := grpcServer.Serve(lis); err != nil {
 		log.Fatalf("Failed to serve gRPC server over port 9000: %v", err)

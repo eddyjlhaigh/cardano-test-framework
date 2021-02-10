@@ -1,0 +1,14 @@
+syntax = "proto3";
+package chat;
+
+message DirectoryMessage {
+    string body = 1;
+}
+
+message DirectoryResponse {
+    string body = 1;
+}
+
+service ChatService {
+    rpc PrintDir(DirectoryMessage) returns (DirectoryResponse) {}
+}
