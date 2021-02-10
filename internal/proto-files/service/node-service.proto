@@ -3,7 +3,8 @@ syntax = "proto3";
 package service;
 
 service NodeService {
-    rpc PrintDir(Request) returns (Response) {}
+    rpc GetNodeVersion(Request) returns (Response) {}
+    rpc OfflineKeyGen(Request) returns (Response) {}
 }
 
 message Request { 

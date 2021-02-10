@@ -1,0 +1,1 @@
+go run $PWD/cmd/grpc/server/main.go
