@@ -1,12 +1,10 @@
 syntax = "proto3";
 package chat;
 
-option go_package = "github.com/eddyjlhaigh/cardano-test-framework;server";
-
 message Message {
-  string body = 1;
+    string body = 1;
 }
 
 service ChatService {
-  rpc SayHello(Message) returns (Message) {}
+    rpc SayHello(Message) returns (Message) {}
 }
