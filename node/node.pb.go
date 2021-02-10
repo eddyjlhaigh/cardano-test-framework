@@ -29,7 +29,7 @@ const (
 // of the legacy proto package is being used.
 const _ = proto.ProtoPackageIsVersion4
 
-type DirectoryMessage struct {
+type GetVersionMessage struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
@@ -37,8 +37,8 @@ type DirectoryMessage struct {
 	Body string `protobuf:"bytes,1,opt,name=body,proto3" json:"body,omitempty"`
 }
 
-func (x *DirectoryMessage) Reset() {
-	*x = DirectoryMessage{}
+func (x *GetVersionMessage) Reset() {
+	*x = GetVersionMessage{}
 	if protoimpl.UnsafeEnabled {
 		mi := &file_node_proto_msgTypes[0]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
@@ -46,13 +46,13 @@ func (x *DirectoryMessage) Reset() {
 	}
 }
 
-func (x *DirectoryMessage) String() string {
+func (x *GetVersionMessage) String() string {
 	return protoimpl.X.MessageStringOf(x)
 }
 
-func (*DirectoryMessage) ProtoMessage() {}
+func (*GetVersionMessage) ProtoMessage() {}
 
-func (x *DirectoryMessage) ProtoReflect() protoreflect.Message {
+func (x *GetVersionMessage) ProtoReflect() protoreflect.Message {
 	mi := &file_node_proto_msgTypes[0]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
@@ -64,19 +64,19 @@ func (x *DirectoryMessage) ProtoReflect() protoreflect.Message {
 	return mi.MessageOf(x)
 }
 
-// Deprecated: Use DirectoryMessage.ProtoReflect.Descriptor instead.
-func (*DirectoryMessage) Descriptor() ([]byte, []int) {
+// Deprecated: Use GetVersionMessage.ProtoReflect.Descriptor instead.
+func (*GetVersionMessage) Descriptor() ([]byte, []int) {
 	return file_node_proto_rawDescGZIP(), []int{0}
 }
 
-func (x *DirectoryMessage) GetBody() string {
+func (x *GetVersionMessage) GetBody() string {
 	if x != nil {
 		return x.Body
 	}
 	return ""
 }
 
-type DirectoryResponse struct {
+type GetVersionResponse struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
@@ -84,8 +84,8 @@ type DirectoryResponse struct {
 	Body string `protobuf:"bytes,1,opt,name=body,proto3" json:"body,omitempty"`
 }
 
-func (x *DirectoryResponse) Reset() {
-	*x = DirectoryResponse{}
+func (x *GetVersionResponse) Reset() {
+	*x = GetVersionResponse{}
 	if protoimpl.UnsafeEnabled {
 		mi := &file_node_proto_msgTypes[1]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
@@ -93,13 +93,13 @@ func (x *DirectoryResponse) Reset() {
 	}
 }
 
-func (x *DirectoryResponse) String() string {
+func (x *GetVersionResponse) String() string {
 	return protoimpl.X.MessageStringOf(x)
 }
 
-func (*DirectoryResponse) ProtoMessage() {}
+func (*GetVersionResponse) ProtoMessage() {}
 
-func (x *DirectoryResponse) ProtoReflect() protoreflect.Message {
+func (x *GetVersionResponse) ProtoReflect() protoreflect.Message {
 	mi := &file_node_proto_msgTypes[1]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
@@ -111,12 +111,12 @@ func (x *DirectoryResponse) ProtoReflect() protoreflect.Message {
 	return mi.MessageOf(x)
 }
 
-// Deprecated: Use DirectoryResponse.ProtoReflect.Descriptor instead.
-func (*DirectoryResponse) Descriptor() ([]byte, []int) {
+// Deprecated: Use GetVersionResponse.ProtoReflect.Descriptor instead.
+func (*GetVersionResponse) Descriptor() ([]byte, []int) {
 	return file_node_proto_rawDescGZIP(), []int{1}
 }
 
-func (x *DirectoryResponse) GetBody() string {
+func (x *GetVersionResponse) GetBody() string {
 	if x != nil {
 		return x.Body
 	}
@@ -126,18 +126,18 @@ func (x *DirectoryResponse) GetBody() string {
 var File_node_proto protoreflect.FileDescriptor
 
 var file_node_proto_rawDesc = []byte{
-	0x0a, 0x0a, 0x6e, 0x6f, 0x64, 0x65, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x12, 0x04, 0x63, 0x68,
-	0x61, 0x74, 0x22, 0x26, 0x0a, 0x10, 0x44, 0x69, 0x72, 0x65, 0x63, 0x74, 0x6f, 0x72, 0x79, 0x4d,
-	0x65, 0x73, 0x73, 0x61, 0x67, 0x65, 0x12, 0x12, 0x0a, 0x04, 0x62, 0x6f, 0x64, 0x79, 0x18, 0x01,
-	0x20, 0x01, 0x28, 0x09, 0x52, 0x04, 0x62, 0x6f, 0x64, 0x79, 0x22, 0x27, 0x0a, 0x11, 0x44, 0x69,
-	0x72, 0x65, 0x63, 0x74, 0x6f, 0x72, 0x79, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12,
-	0x12, 0x0a, 0x04, 0x62, 0x6f, 0x64, 0x79, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x04, 0x62,
-	0x6f, 0x64, 0x79, 0x32, 0x4c, 0x0a, 0x0b, 0x43, 0x68, 0x61, 0x74, 0x53, 0x65, 0x72, 0x76, 0x69,
-	0x63, 0x65, 0x12, 0x3d, 0x0a, 0x08, 0x50, 0x72, 0x69, 0x6e, 0x74, 0x44, 0x69, 0x72, 0x12, 0x16,
-	0x2e, 0x63, 0x68, 0x61, 0x74, 0x2e, 0x44, 0x69, 0x72, 0x65, 0x63, 0x74, 0x6f, 0x72, 0x79, 0x4d,
-	0x65, 0x73, 0x73, 0x61, 0x67, 0x65, 0x1a, 0x17, 0x2e, 0x63, 0x68, 0x61, 0x74, 0x2e, 0x44, 0x69,
-	0x72, 0x65, 0x63, 0x74, 0x6f, 0x72, 0x79, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22,
-	0x00, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
+	0x0a, 0x0a, 0x6e, 0x6f, 0x64, 0x65, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x12, 0x04, 0x6e, 0x6f,
+	0x64, 0x65, 0x22, 0x27, 0x0a, 0x11, 0x47, 0x65, 0x74, 0x56, 0x65, 0x72, 0x73, 0x69, 0x6f, 0x6e,
+	0x4d, 0x65, 0x73, 0x73, 0x61, 0x67, 0x65, 0x12, 0x12, 0x0a, 0x04, 0x62, 0x6f, 0x64, 0x79, 0x18,
+	0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x04, 0x62, 0x6f, 0x64, 0x79, 0x22, 0x28, 0x0a, 0x12, 0x47,
+	0x65, 0x74, 0x56, 0x65, 0x72, 0x73, 0x69, 0x6f, 0x6e, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73,
+	0x65, 0x12, 0x12, 0x0a, 0x04, 0x62, 0x6f, 0x64, 0x79, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52,
+	0x04, 0x62, 0x6f, 0x64, 0x79, 0x32, 0x4e, 0x0a, 0x0b, 0x4e, 0x6f, 0x64, 0x65, 0x53, 0x65, 0x72,
+	0x76, 0x69, 0x63, 0x65, 0x12, 0x3f, 0x0a, 0x08, 0x50, 0x72, 0x69, 0x6e, 0x74, 0x44, 0x69, 0x72,
+	0x12, 0x17, 0x2e, 0x6e, 0x6f, 0x64, 0x65, 0x2e, 0x47, 0x65, 0x74, 0x56, 0x65, 0x72, 0x73, 0x69,
+	0x6f, 0x6e, 0x4d, 0x65, 0x73, 0x73, 0x61, 0x67, 0x65, 0x1a, 0x18, 0x2e, 0x6e, 0x6f, 0x64, 0x65,
+	0x2e, 0x47, 0x65, 0x74, 0x56, 0x65, 0x72, 0x73, 0x69, 0x6f, 0x6e, 0x52, 0x65, 0x73, 0x70, 0x6f,
+	0x6e, 0x73, 0x65, 0x22, 0x00, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
 }
 
 var (
@@ -154,12 +154,12 @@ func file_node_proto_rawDescGZIP() []byte {
 
 var file_node_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
 var file_node_proto_goTypes = []interface{}{
-	(*DirectoryMessage)(nil),  // 0: chat.DirectoryMessage
-	(*DirectoryResponse)(nil), // 1: chat.DirectoryResponse
+	(*GetVersionMessage)(nil),  // 0: node.GetVersionMessage
+	(*GetVersionResponse)(nil), // 1: node.GetVersionResponse
 }
 var file_node_proto_depIdxs = []int32{
-	0, // 0: chat.ChatService.PrintDir:input_type -> chat.DirectoryMessage
-	1, // 1: chat.ChatService.PrintDir:output_type -> chat.DirectoryResponse
+	0, // 0: node.NodeService.PrintDir:input_type -> node.GetVersionMessage
+	1, // 1: node.NodeService.PrintDir:output_type -> node.GetVersionResponse
 	1, // [1:2] is the sub-list for method output_type
 	0, // [0:1] is the sub-list for method input_type
 	0, // [0:0] is the sub-list for extension type_name
@@ -174,7 +174,7 @@ func file_node_proto_init() {
 	}
 	if !protoimpl.UnsafeEnabled {
 		file_node_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*DirectoryMessage); i {
+			switch v := v.(*GetVersionMessage); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -186,7 +186,7 @@ func file_node_proto_init() {
 			}
 		}
 		file_node_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*DirectoryResponse); i {
+			switch v := v.(*GetVersionResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -226,72 +226,72 @@ var _ grpc.ClientConnInterface
 // is compatible with the grpc package it is being compiled against.
 const _ = grpc.SupportPackageIsVersion6
 
-// ChatServiceClient is the client API for ChatService service.
+// NodeServiceClient is the client API for NodeService service.
 //
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://godoc.org/google.golang.org/grpc#ClientConn.NewStream.
-type ChatServiceClient interface {
-	PrintDir(ctx context.Context, in *DirectoryMessage, opts ...grpc.CallOption) (*DirectoryResponse, error)
+type NodeServiceClient interface {
+	PrintDir(ctx context.Context, in *GetVersionMessage, opts ...grpc.CallOption) (*GetVersionResponse, error)
 }
 
-type chatServiceClient struct {
+type nodeServiceClient struct {
 	cc grpc.ClientConnInterface
 }
 
-func NewChatServiceClient(cc grpc.ClientConnInterface) ChatServiceClient {
-	return &chatServiceClient{cc}
+func NewNodeServiceClient(cc grpc.ClientConnInterface) NodeServiceClient {
+	return &nodeServiceClient{cc}
 }
 
-func (c *chatServiceClient) PrintDir(ctx context.Context, in *DirectoryMessage, opts ...grpc.CallOption) (*DirectoryResponse, error) {
-	out := new(DirectoryResponse)
-	err := c.cc.Invoke(ctx, "/chat.ChatService/PrintDir", in, out, opts...)
+func (c *nodeServiceClient) PrintDir(ctx context.Context, in *GetVersionMessage, opts ...grpc.CallOption) (*GetVersionResponse, error) {
+	out := new(GetVersionResponse)
+	err := c.cc.Invoke(ctx, "/node.NodeService/PrintDir", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-// ChatServiceServer is the server API for ChatService service.
-type ChatServiceServer interface {
-	PrintDir(context.Context, *DirectoryMessage) (*DirectoryResponse, error)
+// NodeServiceServer is the server API for NodeService service.
+type NodeServiceServer interface {
+	PrintDir(context.Context, *GetVersionMessage) (*GetVersionResponse, error)
 }
 
-// UnimplementedChatServiceServer can be embedded to have forward compatible implementations.
-type UnimplementedChatServiceServer struct {
+// UnimplementedNodeServiceServer can be embedded to have forward compatible implementations.
+type UnimplementedNodeServiceServer struct {
 }
 
-func (*UnimplementedChatServiceServer) PrintDir(context.Context, *DirectoryMessage) (*DirectoryResponse, error) {
+func (*UnimplementedNodeServiceServer) PrintDir(context.Context, *GetVersionMessage) (*GetVersionResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method PrintDir not implemented")
 }
 
-func RegisterChatServiceServer(s *grpc.Server, srv ChatServiceServer) {
-	s.RegisterService(&_ChatService_serviceDesc, srv)
+func RegisterNodeServiceServer(s *grpc.Server, srv NodeServiceServer) {
+	s.RegisterService(&_NodeService_serviceDesc, srv)
 }
 
-func _ChatService_PrintDir_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(DirectoryMessage)
+func _NodeService_PrintDir_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(GetVersionMessage)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(ChatServiceServer).PrintDir(ctx, in)
+		return srv.(NodeServiceServer).PrintDir(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/chat.ChatService/PrintDir",
+		FullMethod: "/node.NodeService/PrintDir",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(ChatServiceServer).PrintDir(ctx, req.(*DirectoryMessage))
+		return srv.(NodeServiceServer).PrintDir(ctx, req.(*GetVersionMessage))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-var _ChatService_serviceDesc = grpc.ServiceDesc{
-	ServiceName: "chat.ChatService",
-	HandlerType: (*ChatServiceServer)(nil),
+var _NodeService_serviceDesc = grpc.ServiceDesc{
+	ServiceName: "node.NodeService",
+	HandlerType: (*NodeServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
 			MethodName: "PrintDir",
-			Handler:    _ChatService_PrintDir_Handler,
+			Handler:    _NodeService_PrintDir_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},

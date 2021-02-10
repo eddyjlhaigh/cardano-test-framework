@@ -3,10 +3,9 @@ package main
 import (
 	"log"
 
+	"github.com/eddyjlhaigh/cardano-test-framework/node"
 	"golang.org/x/net/context"
 	"google.golang.org/grpc"
-
-	"github.com/eddyjlhaigh/cardano-test-framework/chat"
 )
 
 func main() {
@@ -17,13 +16,13 @@ func main() {
 	}
 	defer conn.Close()
 
-	c := chat.NewChatServiceClient(conn)
+	n := node.NewNodeServiceClient(conn)
 
-	message := chat.Message{
+	message := node.GetVersionMessage{
 		Body: "Hello from the client!",
 	}
 
-	response, err := c.SayHello(context.Background(), &message)
+	response, err := n.PrintDir(context.Background(), &message)
 	if err != nil {
 		log.Fatalf("Error when calling SayHello: %s", err)
 	}

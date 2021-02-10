@@ -1,14 +1,14 @@
 syntax = "proto3";
-package chat;
+package node;
 
-message DirectoryMessage {
+message GetVersionMessage { 
     string body = 1;
 }
 
-message DirectoryResponse {
+message GetVersionResponse {
     string body = 1;
 }
 
-service ChatService {
-    rpc PrintDir(DirectoryMessage) returns (DirectoryResponse) {}
+service NodeService {
+    rpc PrintDir(GetVersionMessage) returns (GetVersionResponse) {}
 }
