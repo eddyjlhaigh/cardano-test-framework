@@ -3,6 +3,7 @@ syntax = "proto3";
 package service;
 
 service NodeService {
+    rpc RunNode(Request) returns (Response) {}
     rpc GetNodeVersion(Request) returns (Response) {}
     rpc OfflineKeyGen(Request) returns (Response) {}
 }
