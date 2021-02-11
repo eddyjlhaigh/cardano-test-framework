@@ -1,0 +1,1 @@
+go build -o client cmd/grpc/client/main.go
