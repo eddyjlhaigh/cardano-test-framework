@@ -34,16 +34,4 @@ func main() {
 	} else {
 		fmt.Println(res)
 	}
-
-	if res, err := client.OfflineKeyGen(context.Background(), &req); err != nil {
-		panic(err)
-	} else {
-		fmt.Println(res)
-	}
-
-	if res, err := client.RunNode(context.Background(), &req); err != nil {
-		panic(err)
-	} else {
-		fmt.Println(res)
-	}
 }
