@@ -1,7 +1,11 @@
 # TypeScript
 node_modules
 
-# Node Files
+# Cardano Node Artifacts
 *.counter
 *.skey
 *.vkey
+
+# Build Files 
+client
+server

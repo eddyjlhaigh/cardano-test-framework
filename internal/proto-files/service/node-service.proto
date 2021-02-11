@@ -5,7 +5,8 @@ package service;
 service NodeService {
     rpc RunNode(Request) returns (Response) {}
     rpc GetNodeVersion(Request) returns (Response) {}
-    rpc OfflineKeyGen(Request) returns (Response) {}
+    rpc GeneratePaymentKeyPair(Request) returns (Response) {}
+    rpc GenerateStakeKeyPair(Request) returns (Response) {}
 }
 
 message Request { 
