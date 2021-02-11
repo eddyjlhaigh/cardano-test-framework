@@ -133,7 +133,7 @@ var file_internal_proto_files_service_node_service_proto_rawDesc = []byte{
 	0x71, 0x75, 0x65, 0x73, 0x74, 0x12, 0x12, 0x0a, 0x04, 0x62, 0x6f, 0x64, 0x79, 0x18, 0x01, 0x20,
 	0x01, 0x28, 0x09, 0x52, 0x04, 0x62, 0x6f, 0x64, 0x79, 0x22, 0x1e, 0x0a, 0x08, 0x52, 0x65, 0x73,
 	0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x12, 0x0a, 0x04, 0x62, 0x6f, 0x64, 0x79, 0x18, 0x01, 0x20,
-	0x01, 0x28, 0x09, 0x52, 0x04, 0x62, 0x6f, 0x64, 0x79, 0x32, 0xf8, 0x01, 0x0a, 0x0b, 0x4e, 0x6f,
+	0x01, 0x28, 0x09, 0x52, 0x04, 0x62, 0x6f, 0x64, 0x79, 0x32, 0xaa, 0x03, 0x0a, 0x0b, 0x4e, 0x6f,
 	0x64, 0x65, 0x53, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x12, 0x30, 0x0a, 0x07, 0x52, 0x75, 0x6e,
 	0x4e, 0x6f, 0x64, 0x65, 0x12, 0x10, 0x2e, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x2e, 0x52,
 	0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x11, 0x2e, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65,
@@ -141,15 +141,26 @@ var file_internal_proto_files_service_node_service_proto_rawDesc = []byte{
 	0x65, 0x74, 0x4e, 0x6f, 0x64, 0x65, 0x56, 0x65, 0x72, 0x73, 0x69, 0x6f, 0x6e, 0x12, 0x10, 0x2e,
 	0x73, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x2e, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a,
 	0x11, 0x2e, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x2e, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e,
-	0x73, 0x65, 0x22, 0x00, 0x12, 0x3f, 0x0a, 0x16, 0x47, 0x65, 0x6e, 0x65, 0x72, 0x61, 0x74, 0x65,
-	0x50, 0x61, 0x79, 0x6d, 0x65, 0x6e, 0x74, 0x4b, 0x65, 0x79, 0x50, 0x61, 0x69, 0x72, 0x12, 0x10,
-	0x2e, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x2e, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74,
-	0x1a, 0x11, 0x2e, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x2e, 0x52, 0x65, 0x73, 0x70, 0x6f,
-	0x6e, 0x73, 0x65, 0x22, 0x00, 0x12, 0x3d, 0x0a, 0x14, 0x47, 0x65, 0x6e, 0x65, 0x72, 0x61, 0x74,
-	0x65, 0x53, 0x74, 0x61, 0x6b, 0x65, 0x4b, 0x65, 0x79, 0x50, 0x61, 0x69, 0x72, 0x12, 0x10, 0x2e,
-	0x73, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x2e, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a,
-	0x11, 0x2e, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x2e, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e,
-	0x73, 0x65, 0x22, 0x00, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
+	0x73, 0x65, 0x22, 0x00, 0x12, 0x3a, 0x0a, 0x11, 0x47, 0x65, 0x74, 0x50, 0x61, 0x79, 0x6d, 0x65,
+	0x6e, 0x74, 0x41, 0x64, 0x64, 0x72, 0x65, 0x73, 0x73, 0x12, 0x10, 0x2e, 0x73, 0x65, 0x72, 0x76,
+	0x69, 0x63, 0x65, 0x2e, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x11, 0x2e, 0x73, 0x65,
+	0x72, 0x76, 0x69, 0x63, 0x65, 0x2e, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x00,
+	0x12, 0x38, 0x0a, 0x0f, 0x47, 0x65, 0x74, 0x53, 0x74, 0x61, 0x6b, 0x65, 0x41, 0x64, 0x64, 0x72,
+	0x65, 0x73, 0x73, 0x12, 0x10, 0x2e, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x2e, 0x52, 0x65,
+	0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x11, 0x2e, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x2e,
+	0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x00, 0x12, 0x3a, 0x0a, 0x11, 0x47, 0x65,
+	0x74, 0x41, 0x64, 0x64, 0x72, 0x65, 0x73, 0x73, 0x42, 0x61, 0x6c, 0x61, 0x6e, 0x63, 0x65, 0x12,
+	0x10, 0x2e, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x2e, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73,
+	0x74, 0x1a, 0x11, 0x2e, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x2e, 0x52, 0x65, 0x73, 0x70,
+	0x6f, 0x6e, 0x73, 0x65, 0x22, 0x00, 0x12, 0x3f, 0x0a, 0x16, 0x47, 0x65, 0x6e, 0x65, 0x72, 0x61,
+	0x74, 0x65, 0x50, 0x61, 0x79, 0x6d, 0x65, 0x6e, 0x74, 0x4b, 0x65, 0x79, 0x50, 0x61, 0x69, 0x72,
+	0x12, 0x10, 0x2e, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x2e, 0x52, 0x65, 0x71, 0x75, 0x65,
+	0x73, 0x74, 0x1a, 0x11, 0x2e, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x2e, 0x52, 0x65, 0x73,
+	0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x00, 0x12, 0x3d, 0x0a, 0x14, 0x47, 0x65, 0x6e, 0x65, 0x72,
+	0x61, 0x74, 0x65, 0x53, 0x74, 0x61, 0x6b, 0x65, 0x4b, 0x65, 0x79, 0x50, 0x61, 0x69, 0x72, 0x12,
+	0x10, 0x2e, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x2e, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73,
+	0x74, 0x1a, 0x11, 0x2e, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x2e, 0x52, 0x65, 0x73, 0x70,
+	0x6f, 0x6e, 0x73, 0x65, 0x22, 0x00, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
 }
 
 var (
@@ -172,14 +183,20 @@ var file_internal_proto_files_service_node_service_proto_goTypes = []interface{}
 var file_internal_proto_files_service_node_service_proto_depIdxs = []int32{
 	0, // 0: service.NodeService.RunNode:input_type -> service.Request
 	0, // 1: service.NodeService.GetNodeVersion:input_type -> service.Request
-	0, // 2: service.NodeService.GeneratePaymentKeyPair:input_type -> service.Request
-	0, // 3: service.NodeService.GenerateStakeKeyPair:input_type -> service.Request
-	1, // 4: service.NodeService.RunNode:output_type -> service.Response
-	1, // 5: service.NodeService.GetNodeVersion:output_type -> service.Response
-	1, // 6: service.NodeService.GeneratePaymentKeyPair:output_type -> service.Response
-	1, // 7: service.NodeService.GenerateStakeKeyPair:output_type -> service.Response
-	4, // [4:8] is the sub-list for method output_type
-	0, // [0:4] is the sub-list for method input_type
+	0, // 2: service.NodeService.GetPaymentAddress:input_type -> service.Request
+	0, // 3: service.NodeService.GetStakeAddress:input_type -> service.Request
+	0, // 4: service.NodeService.GetAddressBalance:input_type -> service.Request
+	0, // 5: service.NodeService.GeneratePaymentKeyPair:input_type -> service.Request
+	0, // 6: service.NodeService.GenerateStakeKeyPair:input_type -> service.Request
+	1, // 7: service.NodeService.RunNode:output_type -> service.Response
+	1, // 8: service.NodeService.GetNodeVersion:output_type -> service.Response
+	1, // 9: service.NodeService.GetPaymentAddress:output_type -> service.Response
+	1, // 10: service.NodeService.GetStakeAddress:output_type -> service.Response
+	1, // 11: service.NodeService.GetAddressBalance:output_type -> service.Response
+	1, // 12: service.NodeService.GeneratePaymentKeyPair:output_type -> service.Response
+	1, // 13: service.NodeService.GenerateStakeKeyPair:output_type -> service.Response
+	7, // [7:14] is the sub-list for method output_type
+	0, // [0:7] is the sub-list for method input_type
 	0, // [0:0] is the sub-list for extension type_name
 	0, // [0:0] is the sub-list for extension extendee
 	0, // [0:0] is the sub-list for field type_name
@@ -250,6 +267,9 @@ const _ = grpc.SupportPackageIsVersion6
 type NodeServiceClient interface {
 	RunNode(ctx context.Context, in *Request, opts ...grpc.CallOption) (*Response, error)
 	GetNodeVersion(ctx context.Context, in *Request, opts ...grpc.CallOption) (*Response, error)
+	GetPaymentAddress(ctx context.Context, in *Request, opts ...grpc.CallOption) (*Response, error)
+	GetStakeAddress(ctx context.Context, in *Request, opts ...grpc.CallOption) (*Response, error)
+	GetAddressBalance(ctx context.Context, in *Request, opts ...grpc.CallOption) (*Response, error)
 	GeneratePaymentKeyPair(ctx context.Context, in *Request, opts ...grpc.CallOption) (*Response, error)
 	GenerateStakeKeyPair(ctx context.Context, in *Request, opts ...grpc.CallOption) (*Response, error)
 }
@@ -280,6 +300,33 @@ func (c *nodeServiceClient) GetNodeVersion(ctx context.Context, in *Request, opt
 	return out, nil
 }
 
+func (c *nodeServiceClient) GetPaymentAddress(ctx context.Context, in *Request, opts ...grpc.CallOption) (*Response, error) {
+	out := new(Response)
+	err := c.cc.Invoke(ctx, "/service.NodeService/GetPaymentAddress", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *nodeServiceClient) GetStakeAddress(ctx context.Context, in *Request, opts ...grpc.CallOption) (*Response, error) {
+	out := new(Response)
+	err := c.cc.Invoke(ctx, "/service.NodeService/GetStakeAddress", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *nodeServiceClient) GetAddressBalance(ctx context.Context, in *Request, opts ...grpc.CallOption) (*Response, error) {
+	out := new(Response)
+	err := c.cc.Invoke(ctx, "/service.NodeService/GetAddressBalance", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 func (c *nodeServiceClient) GeneratePaymentKeyPair(ctx context.Context, in *Request, opts ...grpc.CallOption) (*Response, error) {
 	out := new(Response)
 	err := c.cc.Invoke(ctx, "/service.NodeService/GeneratePaymentKeyPair", in, out, opts...)
@@ -302,6 +349,9 @@ func (c *nodeServiceClient) GenerateStakeKeyPair(ctx context.Context, in *Reques
 type NodeServiceServer interface {
 	RunNode(context.Context, *Request) (*Response, error)
 	GetNodeVersion(context.Context, *Request) (*Response, error)
+	GetPaymentAddress(context.Context, *Request) (*Response, error)
+	GetStakeAddress(context.Context, *Request) (*Response, error)
+	GetAddressBalance(context.Context, *Request) (*Response, error)
 	GeneratePaymentKeyPair(context.Context, *Request) (*Response, error)
 	GenerateStakeKeyPair(context.Context, *Request) (*Response, error)
 }
@@ -315,6 +365,15 @@ func (*UnimplementedNodeServiceServer) RunNode(context.Context, *Request) (*Resp
 }
 func (*UnimplementedNodeServiceServer) GetNodeVersion(context.Context, *Request) (*Response, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetNodeVersion not implemented")
+}
+func (*UnimplementedNodeServiceServer) GetPaymentAddress(context.Context, *Request) (*Response, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GetPaymentAddress not implemented")
+}
+func (*UnimplementedNodeServiceServer) GetStakeAddress(context.Context, *Request) (*Response, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GetStakeAddress not implemented")
+}
+func (*UnimplementedNodeServiceServer) GetAddressBalance(context.Context, *Request) (*Response, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GetAddressBalance not implemented")
 }
 func (*UnimplementedNodeServiceServer) GeneratePaymentKeyPair(context.Context, *Request) (*Response, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GeneratePaymentKeyPair not implemented")
@@ -359,6 +418,60 @@ func _NodeService_GetNodeVersion_Handler(srv interface{}, ctx context.Context, d
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(NodeServiceServer).GetNodeVersion(ctx, req.(*Request))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _NodeService_GetPaymentAddress_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(Request)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(NodeServiceServer).GetPaymentAddress(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/service.NodeService/GetPaymentAddress",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(NodeServiceServer).GetPaymentAddress(ctx, req.(*Request))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _NodeService_GetStakeAddress_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(Request)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(NodeServiceServer).GetStakeAddress(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/service.NodeService/GetStakeAddress",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(NodeServiceServer).GetStakeAddress(ctx, req.(*Request))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _NodeService_GetAddressBalance_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(Request)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(NodeServiceServer).GetAddressBalance(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/service.NodeService/GetAddressBalance",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(NodeServiceServer).GetAddressBalance(ctx, req.(*Request))
 	}
 	return interceptor(ctx, in, info, handler)
 }
@@ -410,6 +523,18 @@ var _NodeService_serviceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "GetNodeVersion",
 			Handler:    _NodeService_GetNodeVersion_Handler,
+		},
+		{
+			MethodName: "GetPaymentAddress",
+			Handler:    _NodeService_GetPaymentAddress_Handler,
+		},
+		{
+			MethodName: "GetStakeAddress",
+			Handler:    _NodeService_GetStakeAddress_Handler,
+		},
+		{
+			MethodName: "GetAddressBalance",
+			Handler:    _NodeService_GetAddressBalance_Handler,
 		},
 		{
 			MethodName: "GeneratePaymentKeyPair",
