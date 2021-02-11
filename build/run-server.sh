@@ -1,1 +1,1 @@
-go run $PWD/cmd/grpc/server/main.go
+go run $PWD/cmd/grpc/server/main.go -p $1

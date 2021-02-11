@@ -2,6 +2,7 @@ package main
 
 import (
 	"context"
+	"flag"
 	"fmt"
 
 	"github.com/eddyjlhaigh/cardano-test-framework/internal/grpc/service"
@@ -9,8 +10,16 @@ import (
 )
 
 func main() {
+	// Command line flags
+	var portflag int
+
+	flag.IntVar(&portflag, "p", 50005, "Specify port number for server.")
+	flag.Parse()
+
+	targetURL := fmt.Sprintf("%s%d", ":", portflag)
+
 	// dial server
-	conn, err := grpc.Dial(":50005", grpc.WithInsecure())
+	conn, err := grpc.Dial(targetURL, grpc.WithInsecure())
 
 	if err != nil {
 		panic(err)
