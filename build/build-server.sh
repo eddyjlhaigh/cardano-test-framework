@@ -1,0 +1,1 @@
+go build -o server cmd/grpc/server/main.go
