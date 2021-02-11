@@ -2,6 +2,10 @@
 
 A prototype to see if gRPC would be a valid tool to help with Cardano test frameworks.
 
+## Summary
+
+This project consists of two services - a client and a server. These communicate over gRPC and implement functions over `cardano-cli`. The server should be placed in an environment that contains an instance of `cardano-cli` and `cardano-node`. The server has several rpc methods that allow you to run commands from the client. You can launch a server by running `server -p 50005` if you have the stand-alone executable and there is a dummy client to test this with by running `client -p 50005`. 
+
 ## Requirements:
 
 - Golang 1.15
@@ -15,7 +19,7 @@ Installation notes can be found here https://grpc.io/docs/languages/go/quickstar
 
 `./proto-gen.sh` compiles `.proto` files
 `./run-server.sh <port>` and `./run-client.sh <port>` runs a server and client.
-`./build-server.sh <port>` and `./build-client.sh <port>` builds a server and client.
+`./build-server.sh` and `./build-client.sh` builds a server and client.
 
 ### Contributing
 
