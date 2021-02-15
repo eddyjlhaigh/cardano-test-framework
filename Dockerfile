@@ -62,19 +62,19 @@ RUN cabal install cardano-node \
 # Cleanup for server copy of /usr/local/lib
 RUN rm -rf /usr/local/lib/ghc-${GHC_VERSION} /usr/local/lib/pkgconfig
 FROM golang as server-builder
+USER root
 RUN \
         apt-get update && \
         apt-get install -y --no-install-recommends \
-        protobuf-compiler
+        protobuf-compiler \
+        golang-goprotobuf-dev
 COPY --from=haskell-builder /usr/local/lib /usr/local/lib
 COPY --from=haskell-builder /usr/local/bin/cardano-cli /usr/local/bin/
 COPY --from=haskell-builder /usr/local/bin/cardano-node /usr/local/bin/
 COPY . src
 WORKDIR src
-RUN \
-        ./build/proto-gen.sh && \
-        ./build/build-server.sh && \
-        ./build/build-client.sh
+RUN ./build/proto-gen.sh
 ENV LD_LIBRARY_PATH="/usr/local/lib:$LD_LIBRARY_PATH"
 EXPOSE 50005
-CMD ['./build/run-server.sh']
+RUN cardano-cli --version
+CMD ./build/run-server.sh 50005
