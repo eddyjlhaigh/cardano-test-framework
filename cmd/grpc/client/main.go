@@ -29,19 +29,7 @@ func main() {
 	client := service.NewNodeServiceClient(conn)
 
 	req := service.Request{Body: "Test"}
-	if res, err := client.GeneratePaymentKeyPair(context.Background(), &req); err != nil {
-		panic(err)
-	} else {
-		fmt.Println(res)
-	}
-
-	if res, err := client.GenerateStakeKeyPair(context.Background(), &req); err != nil {
-		panic(err)
-	} else {
-		fmt.Println(res)
-	}
-
-	if res, err := client.GetPaymentAddress(context.Background(), &req); err != nil {
+	if res, err := client.GetNodeVersion(context.Background(), &req); err != nil {
 		panic(err)
 	} else {
 		fmt.Println(res)

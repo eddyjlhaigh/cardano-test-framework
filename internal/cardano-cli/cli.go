@@ -1,4 +1,4 @@
-package cli
+package lib
 
 import (
 	"log"
@@ -39,4 +39,8 @@ func (c *CLI) Version() string {
 		log.Printf("error: %v\n", err)
 	}
 	return string(out)
+}
+
+func init() {
+
 }
