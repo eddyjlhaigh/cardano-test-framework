@@ -54,6 +54,10 @@ type CLI struct {
 	Query        Query
 }
 
+/****************************************************************
+*	ADDRESS FUNCTIONS		                        *
+****************************************************************/
+
 // KeyGenNormal creates a normal address key pair
 func (a *Address) KeyGenNormal(
 	verificationKeyFileName string,
@@ -62,7 +66,8 @@ func (a *Address) KeyGenNormal(
 	_, err := exec.Command(
 		"cardano-cli", "address", "key-gen", "--normal-key",
 		"--verification-key-file", verificationKeyFileName,
-		"--signing-key-file", signingKeyFileName).Output()
+		"--signing-key-file", signingKeyFileName,
+	).Output()
 	if err != nil {
 		log.Printf("error: %v\n", err)
 	}
@@ -76,7 +81,8 @@ func (a *Address) KeyGenExtended(
 	_, err := exec.Command(
 		"cardano-cli", "address", "key-gen", "--extended-key",
 		"--verification-key-file", verificationKeyFileName,
-		"--signing-key-file", signingKeyFileName).Output()
+		"--signing-key-file", signingKeyFileName,
+	).Output()
 	if err != nil {
 		log.Printf("error: %v\n", err)
 	}
@@ -90,23 +96,118 @@ func (a *Address) KeyGenByron(
 	_, err := exec.Command(
 		"cardano-cli", "address", "key-gen", "--byron-key",
 		"--verification-key-file", verificationKeyFileName,
-		"--signing-key-file", signingKeyFileName).Output()
+		"--signing-key-file", signingKeyFileName,
+	).Output()
 	if err != nil {
 		log.Printf("error: %v\n", err)
 	}
 }
 
-func (a *Address) KeyHash() {
+// KeyHash - Print the hash of an address key
+func (a *Address) KeyHash(
+	paymentVerificationKeyFile string,
+	outFile string,
+) {
+	_, err := exec.Command(
+		"cardano-cli", "address", "key-hash",
+		"--payment-verification-key-file", paymentVerificationKeyFile,
+		"--out-file", outFile,
+	).Output()
+	if err != nil {
+		log.Printf("error: %v\n", err)
+	}
 }
 
-func (a *Address) Build() {
+// Build - Build a Shelley payment address, with optional delegation to a stake address
+func (a *Address) Build(
+	paymentVerificationKeyFile string,
+	stakeVerificationKeyFile string,
+	magicId string,
+	outFile string,
+) {
+	_, err := exec.Command(
+		"cardano-cli", "address", "build",
+		"--payment-verification-key-file", paymentVerificationKeyFile,
+		"--stake-verification-key-file", stakeVerificationKeyFile,
+		"--mainnet", magicId,
+		"--out-file", outFile,
+	).Output()
+	if err != nil {
+		log.Printf("error: %v\n", err)
+	}
 }
 
-func (a *Address) BuildScript() {
+// BuildScript - Build a Shelley script address
+func (a *Address) BuildScript(
+	scriptFile string,
+	magicId string,
+	outFile string,
+) {
+	_, err := exec.Command(
+		"cardano-cli", "address", "build-script",
+		"--script-file", scriptFile,
+		"--mainnet", magicId,
+		"--out-file", outFile,
+	).Output()
+	if err != nil {
+		log.Printf("error: %v\n", err)
+	}
 }
 
-func (a *Address) Info() {
+// Info - Print information about an address
+func (a *Address) Info(
+	address string,
+	outFile string,
+) {
+	_, err := exec.Command(
+		"cardano-cli", "address", "info",
+		"--address", address,
+		"--out-file", outFile,
+	).Output()
+	if err != nil {
+		log.Printf("error: %v\n", err)
+	}
 }
+
+/****************************************************************
+*	BYRON FUNCTIONS						*
+****************************************************************/
+
+/****************************************************************
+*	GENESIS FUNCTIONS					*
+****************************************************************/
+
+/****************************************************************
+*	GOVERNANCE FUNCTIONS					*
+****************************************************************/
+
+/****************************************************************
+*	KEY FUNCTIONS						*
+****************************************************************/
+
+/****************************************************************
+*	NODE FUNCTIONS						*
+****************************************************************/
+
+/****************************************************************
+*	STAKE ADDRESS FUNCTIONS					*
+****************************************************************/
+
+/****************************************************************
+*	STAKE POOL FUNCTIONS					*
+****************************************************************/
+
+/****************************************************************
+*	TRANSACTION FUNCTIONS					*
+****************************************************************/
+
+/****************************************************************
+*	TEXT VIEW FUNCTIONS					*
+****************************************************************/
+
+/****************************************************************
+*	QUERY FUNCTIONS						*
+****************************************************************/
 
 // Version returns the `cardano-cli --version` output as a string
 func (c *CLI) Version() string {
