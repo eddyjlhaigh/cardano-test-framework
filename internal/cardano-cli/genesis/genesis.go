@@ -3,42 +3,32 @@ package genesis
 // Genesis represents the cardano-cli genesis sub-commands
 type Genesis struct{}
 
-func (g *Genesis) KeyGenGenesis() {
+// Create - Create a Shelley genesis file from a genesis template and genesis/delegation/spending keys
+func (g *Genesis) Create() {}
 
-}
+// CreateStaked - Create a staked Shelley genesis file from a genesis template and genesis/delegation/spending keys
+func (g *Genesis) CreateStaked() {}
 
-func (g *Genesis) KeyGenDelgate() {
+// GetVerKey - Derive the verification key from a signing key
+func (g *Genesis) GetVerKey() {}
 
-}
+// Hash - Compute the hash of a genesis file
+func (g *Genesis) Hash() {}
 
-func (g *Genesis) KeyGenUtxo() {
+// InitialAddr - Get the address for an initial UTxO based on the verification key
+func (g *Genesis) InitialAddr() {}
 
-}
+// InitialTxIn - Get the TxIn for an initial UTxO based on the verification key
+func (g *Genesis) InitialTxIn() {}
 
-func (g *Genesis) KeyHash() {
+// KeyGenDelegate - Create a Shelley genesis delegate key pair
+func (g *Genesis) KeyGenDelegate() {}
 
-}
+// KeyGenGenesis - Create a Shelley genesis key pair
+func (g *Genesis) KeyGenGenesis() {}
 
-func (g *Genesis) GetVerKey() {
+// KeyGenUtxo - Create a Shelley genesis UTxO key pair
+func (g *Genesis) KeyGenUtxo() {}
 
-}
-
-func (g *Genesis) InitialAddr() {
-
-}
-
-func (g *Genesis) InitiailTxIn() {
-
-}
-
-func (g *Genesis) Create() {
-
-}
-
-func (g *Genesis) CreateStaked() {
-
-}
-
-func (g *Genesis) Hash() {
-
-}
+// KeyHash - Print the identifier (hash) of a public key
+func (g *Genesis) KeyHash() {}

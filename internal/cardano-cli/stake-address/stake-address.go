@@ -3,26 +3,20 @@ package stakeaddress
 // StakeAddress represents the cardano-cli stake-address sub-commands
 type StakeAddress struct{}
 
-func (s *StakeAddress) KeyGen() {
+// Build - Build a stake address
+func (s *StakeAddress) Build() {}
 
-}
+// DelegationCertificate - Create a stake address delegation certificate
+func (s *StakeAddress) DelegationCertificate() {}
 
-func (s *StakeAddress) Build() {
+// DeregistrationCertificate - Create a stake address deregistration certificate
+func (s *StakeAddress) DeregistrationCertificate() {}
 
-}
+// KeyHash - Print the hash of a stake address key
+func (s *StakeAddress) KeyHash() {}
 
-func (s *StakeAddress) KeyHash() {
+// KeyGen - Create a stake address key pair
+func (s *StakeAddress) KeyGen() {}
 
-}
-
-func (s *StakeAddress) RegistrationCertificate() {
-
-}
-
-func (s *StakeAddress) DeregistrationCertificate() {
-
-}
-
-func (s *StakeAddress) DelegationCertificate() {
-
-}
+// RegistrationCertificate - Create a stake address registration certificate
+func (s *StakeAddress) RegistrationCertificate() {}

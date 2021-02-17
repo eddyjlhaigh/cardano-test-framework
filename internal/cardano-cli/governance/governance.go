@@ -3,14 +3,11 @@ package governance
 // Governance represents the cardano-cli governance sub-commands
 type Governance struct{}
 
-func (g *Governance) CreateMirCertificate() {
+// CreateGenesisKeyDelegationCertificate - Create a genesis key delegation certificate
+func (g *Governance) CreateGenesisKeyDelegationCertificate() {}
 
-}
+// CreateMirCertificate - Create an MIR (Move Instantaneous Rewards) certificate
+func (g *Governance) CreateMirCertificate() {}
 
-func (g *Governance) CreateGenesisKeyDelegationCertificate() {
-
-}
-
-func (g *Governance) CreateUpdateProposal() {
-
-}
+// CreateUpdateProposal - Create an update proposal
+func (g *Governance) CreateUpdateProposal() {}

@@ -3,30 +3,23 @@ package query
 // Query represents the cardano-cli query sub-commands
 type Query struct{}
 
-func (q *Query) ProtocolParameters() {
+// LedgerState - Dump the current ledger state of the node (Ledger.NewEpochState -- advanced command)
+func (q *Query) LedgerState() {}
 
-}
+// ProtocolParameters - Get the node's current protocol parameters
+func (q *Query) ProtocolParameters() {}
 
-func (q *Query) Tip() {
+// ProtocolState - Dump the current protocol state of the node (Ledger.ChainDepState -- advanced command)
+func (q *Query) ProtocolState() {}
 
-}
+// StakeAddressInfo - Get the current delegations and reward accounts
+func (q *Query) StakeAddressInfo() {}
 
-func (q *Query) StakeDistribution() {
+// StakeDistribution - Get the node's current aggregated stake distribution
+func (q *Query) StakeDistribution() {}
 
-}
+// Tip - Get the node's current tip (slot no, hash, block no)
+func (q *Query) Tip() {}
 
-func (q *Query) StakeAddressInfo() {
-
-}
-
-func (q *Query) Utxo() {
-
-}
-
-func (q *Query) LedgerState() {
-
-}
-
-func (q *Query) ProtocolState() {
-
-}
+// Utxo - Get the node's current UTxO with the option of filtering by address(es)
+func (q *Query) Utxo() {}

@@ -3,26 +3,20 @@ package node
 // Node represents the cardano-cli node sub-commands
 type Node struct{}
 
-func (n *Node) KeyGen() {
+// IssueOpCert - Issue a node operational certificate
+func (n *Node) IssueOpCert() {}
 
-}
+// KeyGen - Create a key pair for a node operator's offline key and a new certificate issue counter
+func (n *Node) KeyGen() {}
 
-func (n *Node) KeyGenKES() {
+// KeyGenKES - Create a key pair for a node KES operational key
+func (n *Node) KeyGenKES() {}
 
-}
+// KeyGenVRF - Create a key pair for a node VRF operational key
+func (n *Node) KeyGenVRF() {}
 
-func (n *Node) KeyGenVRF() {
+// KeyHashVRF - Print hash of a node's operational VRF key
+func (n *Node) KeyHashVRF() {}
 
-}
-
-func (n *Node) KeyHashVRF() {
-
-}
-
-func (n *Node) NewCounter() {
-
-}
-
-func (n *Node) IssueOpCert() {
-
-}
+// NewCounter - Create a new certificate issue counter
+func (n *Node) NewCounter() {}
