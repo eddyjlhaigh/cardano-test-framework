@@ -6,6 +6,11 @@ node_modules
 *.skey
 *.vkey
 *.addr
+/db
+mainnet-byron-genesis.json
+mainnet-config.json
+mainnet-shelley-genesis.json
+mainnet-topology.json
 
 # Build Files 
 client

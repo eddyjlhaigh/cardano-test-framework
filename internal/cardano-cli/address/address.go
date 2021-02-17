@@ -72,18 +72,17 @@ func (a *Address) KeyHash(
 func (a *Address) Build(
 	paymentVerificationKeyFile string,
 	stakeVerificationKeyFile string,
-	magicId string,
 	outFile string,
 ) {
-	_, err := exec.Command(
+	output, err := exec.Command(
 		"cardano-cli", "address", "build",
 		"--payment-verification-key-file", paymentVerificationKeyFile,
 		"--stake-verification-key-file", stakeVerificationKeyFile,
-		"--mainnet", magicId,
 		"--out-file", outFile,
+		"--mainnet",
 	).Output()
 	if err != nil {
-		log.Printf("error: %v\n", err)
+		log.Printf("error: %v\n%v", err, string(output))
 	}
 }
 

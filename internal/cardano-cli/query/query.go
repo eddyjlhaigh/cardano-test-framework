@@ -1,5 +1,11 @@
 package query
 
+import (
+	"io/ioutil"
+	"log"
+	"os/exec"
+)
+
 // Query represents the cardano-cli query sub-commands
 type Query struct{}
 
@@ -22,4 +28,20 @@ func (q *Query) StakeDistribution() {}
 func (q *Query) Tip() {}
 
 // Utxo - Get the node's current UTxO with the option of filtering by address(es)
-func (q *Query) Utxo() {}
+func (q *Query) Utxo(
+	addressFile string,
+) {
+	bytes, err := ioutil.ReadFile(addressFile)
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	_, err = exec.Command(
+		"cardano-cli", "query", "utxo",
+		"--address", string(bytes),
+		"--mainnet",
+	).Output()
+	if err != nil {
+		log.Printf("error: %v\n", err)
+	}
+}

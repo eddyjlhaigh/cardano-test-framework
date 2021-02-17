@@ -29,7 +29,7 @@ func main() {
 	client := service.NewNodeServiceClient(conn)
 
 	req := service.Request{Body: "Test"}
-	if res, err := client.GetNodeVersion(context.Background(), &req); err != nil {
+	if res, err := client.CreateKeys(context.Background(), &req); err != nil {
 		panic(err)
 	} else {
 		fmt.Println(res)
