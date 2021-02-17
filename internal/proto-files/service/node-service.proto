@@ -3,15 +3,7 @@ syntax = "proto3";
 package service;
 
 service NodeService {
-    rpc RunNode(Request) returns (Response) {}
-
     rpc GetNodeVersion(Request) returns (Response) {}
-    rpc GetPaymentAddress(Request) returns (Response) {}
-    rpc GetStakeAddress(Request) returns (Response) {}
-    rpc GetAddressBalance(Request) returns (Response) {}
-
-    rpc GeneratePaymentKeyPair(Request) returns (Response) {}
-    rpc GenerateStakeKeyPair(Request) returns (Response) {}
 }
 
 message Request { 
