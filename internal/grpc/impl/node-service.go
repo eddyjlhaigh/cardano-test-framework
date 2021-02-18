@@ -55,8 +55,8 @@ func (serviceImpl *NodeServiceGrpcImpl) CreateKeys(ctx context.Context, in *node
 	var cli cli.CLI
 	cli.Address.KeyGenNormal("payment.vkey", "payment.skey")
 	cli.StakeAddress.KeyGen("stake.vkey", "stake.skey")
-	cli.Address.Build("payment.vkey", "stake.skey", "payment.addr")
+	cli.Address.Build("payment.vkey", "stake.vkey", "payment.addr")
 	cli.StakeAddress.Build("stake.vkey", "stake.addr")
-	cli.Query.Utxo("stake.addr")
+	cli.Query.Utxo("payment.addr")
 	return &service.Response{Body: string("")}, nil
 }
